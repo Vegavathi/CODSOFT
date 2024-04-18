@@ -3,13 +3,13 @@ import string
 
 def password (length,complexity):
     character = ''
-    if 'l' in complexity:
+    if '1' in complexity:
         character += string.ascii_lowercase
-    if 'u' in complexity:
+    if '2' in complexity:
         character += string.ascii_uppercase
-    if 'd' in complexity:
+    if '3' in complexity:
         character += string.digits
-    if 'p' in complexity:
+    if '4' in complexity:
         character += string.punctuation
     
     if not character:
@@ -21,7 +21,7 @@ def password (length,complexity):
 
 if__name__ = "__main__"
 length= int(input("Enter the length of the password:"))
-print("Enter 'l' for lower case letter \n Enter 'u' for upper case letter \n Enter 'd' for digits \n Enter 'p' for puntuation")
+print("Enter '1' for lower case letter \n Enter '2' for upper case letter \n Enter '3' for digits \n Enter '4' for puntuation")
 complexity = input("Enter the complexity:")
 
 generated_password = password(length,complexity)
